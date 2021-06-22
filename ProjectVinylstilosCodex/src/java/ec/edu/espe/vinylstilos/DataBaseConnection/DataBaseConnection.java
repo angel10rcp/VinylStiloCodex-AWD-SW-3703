@@ -31,6 +31,7 @@ public class DataBaseConnection {
         try {           
             //---------------------------------------------------------------------------------------------------
             //Connection By Angel Cardenas
+            Class.forName("org.mariadb.jdbc.Driver");
             connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
                        + "?user=root&password=12345678");
             //---------------------------------------------------------------------------------------------------
