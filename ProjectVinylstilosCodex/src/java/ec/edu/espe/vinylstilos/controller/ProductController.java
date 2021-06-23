@@ -44,5 +44,29 @@ public class ProductController {
         return dataProduct;
     }
     
-    
+   public String postProduct(Product prod){
+     dataBaseConnection.connect();
+     String postResult = "";
+        String sql = "insert into product values('"
+                +prod.getIdProduct()+"','"
+                +prod.getNameProduct()+"','"
+                +prod.getDescriptionProduct()+"','"
+                +prod.getImageProduct()+"',"
+                +prod.getPriceProduct()+","
+                +prod.getAmountProduct()+",'"
+                +prod.getCategoryProduct()+"');";
+       
+        try {
+            ResultSet rec = dataBaseConnection.getSqlStatement().executeQuery(sql);
+            postResult = "insertado con exito";
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+            System.out.println("stack in the catchDel contro --> "+ e.toString());
+            e.printStackTrace();
+            postResult = "error en el insert";
+        }       
+        dataBaseConnection.disconnect();
+        return postResult;
+    }
+
  }
