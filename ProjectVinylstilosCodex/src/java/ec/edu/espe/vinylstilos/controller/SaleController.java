@@ -25,6 +25,16 @@ public class SaleController {
     public SaleController() {
     
     }
+    public Sale getSaleByIdSale(String idSale){
+        Sale wantedSale = new Sale();
+        List<Sale> saleList = readSales();
+        for (int i=0;i<saleList.size();i++) {
+            if(saleList.get(i).getIdSale().equals(idSale)){
+                wantedSale = saleList.get(i);
+            }
+        }
+        return wantedSale;
+    }
     public void putSale(String idSale, Sale sale){
         Statement statement = null;
         DataBaseConnection connection = new DataBaseConnection();
