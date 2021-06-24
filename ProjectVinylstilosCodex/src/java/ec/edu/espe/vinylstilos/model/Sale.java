@@ -41,15 +41,15 @@ public class Sale {
     /**
      * @return the totalScore
      */
-    public float getTotalScore() {
-        return totalScore;
+    public float getTotalSale() {
+        return totalSale;
     }
 
     /**
      * @param totalScore the totalScore to set
      */
-    public void setTotalScore(float totalScore) {
-        this.totalScore = totalScore;
+    public void setTotalSale(float totalScore) {
+        this.totalSale = totalScore;
     }
 
     /**
@@ -69,7 +69,7 @@ public class Sale {
     public Sale(String idSale, String idUser, float totalScore, String date) {
         this.idSale = idSale;
         this.idUser = idUser;
-        this.totalScore = totalScore;
+        this.totalSale = totalScore;
         this.date = date;
     }
 
@@ -78,7 +78,7 @@ public class Sale {
     
     private String idSale;
     private String idUser;
-    private float totalScore;
+    private float totalSale;
     private String date;
          
 }

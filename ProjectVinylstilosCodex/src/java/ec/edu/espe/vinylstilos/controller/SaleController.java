@@ -25,6 +25,22 @@ public class SaleController {
     public SaleController() {
     
     }
+    public Sale postSale(Sale sale){
+        Statement statement = null;        
+        DataBaseConnection connection = new DataBaseConnection();
+        try{
+            connection.connect();
+            statement = connection.getSqlStatement();
+            
+            String sql = "INSERT INTO sale VALUES('" + sale.getIdSale() + "','" + sale.getIdUser() + "','" + sale.getTotalSale()+ "','" + sale.getDate() + "');";
+            ResultSet res = statement.executeQuery(sql);
+            
+        }catch(SQLException ex){
+            Logger.getLogger(DataBaseConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return sale;
+    }
     public Sale getSaleByDate(String dateSale){
         
         Sale wantedSale = new Sale();

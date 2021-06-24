@@ -31,7 +31,8 @@ public class ApplicationConfig extends Application {
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(ec.edu.espe.vinylstilos.webservices.ProductNameResource.class);
         resources.add(ec.edu.espe.vinylstilos.webservices.ProductRest.class);
-        resources.add(ec.edu.espe.vinylstilos.webservices.UserRest.class);
+        resources.add(ec.edu.espe.vinylstilos.webservices.SaleRest.class);
+        resources.add(ec.edu.espe.vinylstilos.webservices.UserRest.class);     
     }
     
 }
