@@ -15,6 +15,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -50,6 +51,14 @@ public class SaleRest {
     public String getXml() {
         //TODO return proper representation object
         throw new UnsupportedOperationException();
+    }
+    
+    @PUT
+    @Path("{putSale}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void putSale(@PathParam("putSale") String idSale, Sale sale) {
+        SaleController editSale = new SaleController();
+        editSale.putSale(idSale, sale);
     }
 
     /**

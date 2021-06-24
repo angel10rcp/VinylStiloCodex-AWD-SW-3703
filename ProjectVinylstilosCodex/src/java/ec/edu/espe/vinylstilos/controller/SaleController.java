@@ -25,6 +25,29 @@ public class SaleController {
     public SaleController() {
     
     }
+    public void putSale(String idSale, Sale sale){
+        Statement statement = null;
+        DataBaseConnection connection = new DataBaseConnection();
+        try{
+            connection.connect();
+            statement = connection.getSqlStatement();
+            String sql = "SELECT * FROM sale WHERE IDSALE = '" + idSale + "';";
+            ResultSet rec = connection.getSqlStatement().executeQuery(sql);
+            rec.next();
+            if (idSale.equals(rec.getString("IDSALE"))) {
+                
+                String sqlUpdate = "Update sale set IDSALE ='" + sale.getIdSale()+ "', IDUSER = '"
+                        + sale.getIdUser()+ "', TOTALSALE = '" + sale.getTotalSale()+ "', DATESALE = '" + sale.getDate()
+                        + "' where IDSALE ='" + idSale + "';";
+                connection.getSqlStatement().executeQuery(sqlUpdate);
+            } else {
+                postSale(sale);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(DataBaseConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     public Sale postSale(Sale sale){
         Statement statement = null;        
         DataBaseConnection connection = new DataBaseConnection();
