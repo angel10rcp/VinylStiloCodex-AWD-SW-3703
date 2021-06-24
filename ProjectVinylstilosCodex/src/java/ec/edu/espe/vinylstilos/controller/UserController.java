@@ -28,8 +28,9 @@ public class UserController {
             conn.connect();            
             String sql = "Select * from user";
             ResultSet rec = conn.getSqlStatement().executeQuery(sql);
-            User user = new User();
+            
             while ((rec != null) && (rec.next())) {
+                User user = new User();
                 user.setIdUser(rec.getString("IDUSER"));
                 user.setFirstName(rec.getString("FIRSTNAME"));
                 user.setLastName(rec.getString("LASTNAME"));

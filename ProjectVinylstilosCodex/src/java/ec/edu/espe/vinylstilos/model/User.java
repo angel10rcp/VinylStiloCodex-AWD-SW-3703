@@ -25,6 +25,11 @@ public class User {
     }
 
     public User() {
+         this.idUser = "";
+        this.firstName = "";
+        this.lastName = "";
+        this.email = "";
+        this.password = "";
     }
     
     /**
