@@ -74,6 +74,18 @@ public class ProductRest {
         controller.postProduct(prod);
     }
     
+    @PUT
+    @Path("/updateProduct/{idProduct}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public String updateProduct(@PathParam("idProduct")String idProduct,Product product) {
+        ProductController productController = new ProductController();
+        if(productController.updateProduct(idProduct, product)){
+            return "Product Update";
+        }else{
+            return "Product isn't update";
+        }
+    }
+    
     @DELETE
     @Path("deleteProducts/{idProduct}")
     @Consumes(MediaType.APPLICATION_JSON)

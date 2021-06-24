@@ -83,4 +83,19 @@ public class ProductController {
             return false;
         }     
     } 
+    
+    public boolean updateProduct(String idProduct, Product product) {
+        dataBaseConnection.connect();
+        String sql = "UPDATE product SET NAMEPRODUCT='"+product.getNameProduct()+"', DESCRIPTIONPRODUCT='"+product.getDescriptionProduct()+"', IMAGEPRODUCT='"+product.getImageProduct()+"',PRICE= "+product.getPriceProduct()+", AMOUNTPRODUCT="+product.getAmountProduct()+" WHERE IDPRODUCT='T007';";
+        try {
+            dataBaseConnection.getSqlStatement().executeQuery(sql);
+            return true;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("stack in the catch --> " + e.toString());
+            e.printStackTrace();
+            dataBaseConnection.disconnect();
+            return false;
+        }
+    }
  }
