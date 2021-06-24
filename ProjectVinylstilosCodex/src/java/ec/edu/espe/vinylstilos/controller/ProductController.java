@@ -68,5 +68,19 @@ public class ProductController {
         dataBaseConnection.disconnect();
         return postResult;
     }
-
+   
+    public boolean deleteProductByID(String idProduct) {
+        dataBaseConnection.connect();
+        String sql = "DELETE FROM product where IDPRODUCT = '" + idProduct + "'";
+        try {
+            dataBaseConnection.getSqlStatement().executeQuery(sql);
+            return true;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("stack in the catch --> " + e.toString());
+            e.printStackTrace();
+           dataBaseConnection.disconnect();
+            return false;
+        }     
+    } 
  }

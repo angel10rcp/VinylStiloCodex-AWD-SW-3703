@@ -74,6 +74,17 @@ public class ProductRest {
         controller.postProduct(prod);
     }
     
+    @DELETE
+    @Path("deleteProducts/{idProduct}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public String deleteProduct(@PathParam("idProduct") String idProduct){
+        ProductController productController = new ProductController();
+        if (productController.deleteProductByID(idProduct))
+            return "Product remove";
+        else
+            return "Porduct isn't remove";
+    }
+    
     /**
      * PUT method for updating or creating an instance of ProductRest
      * @param content representation for the resource
@@ -82,20 +93,5 @@ public class ProductRest {
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     public void putJson(String content) {
-    }
-   /* 
-    @DELETE
-    @Path("/{idProduct}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Product deleteProductById(@PathParam("idProduct")String idProduct) {
-    ProductController productController = new ProductController();
-        Product product = new Product();
-        for(Product aux: productController.readProduct()){
-            if(aux.getIdProduct() == null ? idProduct == null : aux.getIdProduct().equals(idProduct)){
-                product = aux;
-            }
-        }
-        return product;
     }  
-    */
 }
