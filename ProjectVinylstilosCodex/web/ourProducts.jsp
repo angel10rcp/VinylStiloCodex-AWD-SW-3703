@@ -19,9 +19,12 @@
         
         <%
             ProductRestClient cli = new ProductRestClient();
-            List<Product> products = cli.getJson(Product.class);
-            //List<Product> products = new ArrayList<>();
-            Product prod = new Product();
+            List<Product> products = cli.getJson(List.class );
+            
+            Gson gson = new Gson();
+            JsonElement jsonElement;
+            Product prod;
+            
         %>
         
         <table width="600" borde="1">
@@ -36,14 +39,17 @@
                 </tr>
                 <% for (int i=0; i<products.size(); i++){ %>
                 <tr>
-                    <% //Product prod = products.get(i); %>
-                    <td><div align="center"><%=prod.getIdProduct()%></div></td>
-                    <td><div align="center"><%=prod.getNameProduct()%></div></td>
-                    <td><div align="center"><%=prod.getDescriptionProduct()%></div></td>
-                    <td><div align="center"><%=prod.getImageProduct()%></div></td>
-                    <td><div align="center"><%=prod.getPriceProduct()%></div></td>
-                    <td><div align="center"><%=prod.getAmountProduct()%></div></td>
-                    <td><div align="center"><%=prod.getCategoryProduct()%></div></td>
+                    <% 
+                        jsonElement = gson.toJsonTree(products.get(i));
+                        prod = gson.fromJson(jsonElement, Product.class); 
+                    %>
+                    <td><div align="center"><%=prod.getId()%></div></td>
+                    <td><div align="center"><%=prod.getName()%></div></td>
+                    <td><div align="center"><%=prod.getDescription()%></div></td>
+                    <td><div align="center"><%=prod.getImage()%></div></td>
+                    <td><div align="center"><%=prod.getPrice()%></div></td>
+                    <td><div align="center"><%=prod.getAmong()%></div></td>
+                    <td><div align="center"><%=prod.getCategory()%></div></td>
                 </tr>
                 <% } %>
             </table>
