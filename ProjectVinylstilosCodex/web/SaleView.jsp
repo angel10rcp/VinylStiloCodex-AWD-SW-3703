@@ -18,7 +18,7 @@
     </head>
     <body>
         <h1>Search a Sale</h1>
-       <form action="ConsumeGetSale.jsp" method="POST">
+       <form action="ConsumeGetSale.jsp" method="get">
             <div class="form-row align-items-center">
               <div class="col-sm-3 my-1">
                 <input type="text" class="form-control" name="idSale" id="idSale" placeholder="Example: 027S">
