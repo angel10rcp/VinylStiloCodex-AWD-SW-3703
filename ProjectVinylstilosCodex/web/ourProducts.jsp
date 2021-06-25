@@ -6,6 +6,8 @@
 
 
 
+<%@page import="java.util.List"%>
+<%@page import="ec.edu.espe.vinylstilos.webservices.ProductRest"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="ec.edu.espe.vinylstilos.client.ProductNameClient"%>
 <%@page import="com.google.gson.JsonElement"%>
@@ -16,19 +18,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>List Products</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Estos son nuestros productos:</h1>
+        <h1>These are our products</h1>
         
         <%
-            ProductNameClient cli = new ProductNameClient();
-            ArrayList<Product> products = cli.getJson(ArrayList.class );
-            
-            Gson gson = new Gson();
-            JsonElement jsonElement;
-            Product prod;
-            
+           ProductRest productRest = new ProductRest();
+           List<Product> products = productRest.getJson();
+           Product product = new Product();
+           
         %>
         
         <table width="600" borde="1">
@@ -44,16 +44,15 @@
                 <% for (int i=0; i<products.size(); i++){ %>
                 <tr>
                     <% 
-                        jsonElement = gson.toJsonTree(products.get(i));
-                        prod = gson.fromJson(jsonElement, Product.class); 
+                        product = products.get(i); 
                     %>
-                    <td><div align="center"><%=prod.getIdProduct()%></div></td>
-                    <td><div align="center"><%=prod.getNameProduct()%></div></td>
-                    <td><div align="center"><%=prod.getDescriptionProduct()%></div></td>
-                    <td><div align="center"><%=prod.getImageProduct()%></div></td>
-                    <td><div align="center"><%=prod.getPriceProduct()%></div></td>
-                    <td><div align="center"><%=prod.getAmountProduct()%></div></td>
-                    <td><div align="center"><%=prod.getCategoryProduct()%></div></td>
+                    <td><div align="center"><%=product.getIdProduct()%></div></td>
+                    <td><div align="center"><%=product.getNameProduct()%></div></td>
+                    <td><div align="center"><%=product.getDescriptionProduct()%></div></td>
+                    <td><div align="center"><%=product.getImageProduct()%></div></td>
+                    <td><div align="center"><%=product.getPriceProduct()%></div></td>
+                    <td><div align="center"><%=product.getAmountProduct()%></div></td>
+                    <td><div align="center"><%=product.getCategoryProduct()%></div></td>
                 </tr>
                 <% } %>
             </table>
