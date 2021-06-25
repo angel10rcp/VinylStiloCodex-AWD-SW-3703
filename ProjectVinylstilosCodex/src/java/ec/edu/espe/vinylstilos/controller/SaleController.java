@@ -25,6 +25,18 @@ public class SaleController {
     public SaleController() {
     
     }
+    public void deleteSale(String idSale){
+        Statement statement = null;
+        DataBaseConnection connection = new DataBaseConnection();
+        try {
+            connection.connect();
+            statement = connection.getSqlStatement();
+            String sql = "DELETE FROM sale WHERE IDSALE = '"+idSale+"'";
+            ResultSet res = statement.executeQuery(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(DataBaseConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     public Sale getSaleByIdSale(String idSale){
         Sale wantedSale = new Sale();
         List<Sale> saleList = readSales();

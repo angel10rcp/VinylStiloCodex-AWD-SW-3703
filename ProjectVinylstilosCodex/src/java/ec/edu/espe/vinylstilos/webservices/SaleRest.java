@@ -10,6 +10,7 @@ import ec.edu.espe.vinylstilos.model.Sale;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -52,6 +53,13 @@ public class SaleRest {
         //TODO return proper representation object
         throw new UnsupportedOperationException();
     }
+    @GET
+    @Path("{getByIdSale}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Sale getSaleByIdUser(@PathParam("getByIdSale") String idSale) {
+        SaleController wantedSale = new SaleController();
+        return wantedSale.getSaleByIdSale(idSale);
+    }
     
     @PUT
     @Path("{putSale}")
@@ -68,5 +76,12 @@ public class SaleRest {
     @PUT
     @Consumes(MediaType.APPLICATION_XML)
     public void putXml(String content) {
+    }
+    @DELETE
+    @Path("{deleteByIdSale}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void deleteByIdSale(@PathParam("deleteByIdSale") String idSale) {
+        SaleController removeSale = new SaleController();
+        removeSale.deleteSale(idSale);
     }
 }
