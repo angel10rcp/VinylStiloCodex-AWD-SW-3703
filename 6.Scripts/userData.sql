@@ -1,0 +1,6 @@
+INSERT INTO user(IDUSER, FIRSTNAME,LASTNAME,EMAIL,PASSWORD) VALUES ('A1BCD','Kevin','Caicedo','kevincaicedo143@gmail.com','78905677');
+INSERT INTO user(IDUSER, FIRSTNAME,LASTNAME,EMAIL,PASSWORD) VALUES ('A2BCD','Jairo','Bermudez','jBermudez@gmail.com','kcr123432');
+INSERT INTO user(IDUSER, FIRSTNAME,LASTNAME,EMAIL,PASSWORD) VALUES ('A3BCD','Brya','Lopez','blopez@gmail.com','klem123432');
+INSERT INTO user(IDUSER, FIRSTNAME,LASTNAME,EMAIL,PASSWORD) VALUES ('A4BCD','Santiago','Jimenez','sjimenez143@gmail.com','jpej393923');
+INSERT INTO user(IDUSER, FIRSTNAME,LASTNAME,EMAIL,PASSWORD) VALUES ('A5BCD','David','Martinez','dmartinez143@gmail.com','klope43213');
+INSERT INTO user(IDUSER, FIRSTNAME,LASTNAME,EMAIL,PASSWORD) VALUES ('A6BCD','Angel','Andrango','aandrango@gmail.com','s0923mdos');
