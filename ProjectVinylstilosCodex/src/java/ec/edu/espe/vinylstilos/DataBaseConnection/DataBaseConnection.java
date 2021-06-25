@@ -31,9 +31,9 @@ public class DataBaseConnection {
         try {           
             //---------------------------------------------------------------------------------------------------
             //Connection By Angel Cardenas
-           Class.forName("org.mariadb.jdbc.Driver");
-                connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
-                       + "?user=root&password=12345678");
+           //Class.forName("org.mariadb.jdbc.Driver");
+             //   connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
+               //        + "?user=root&password=12345678");
             //---------------------------------------------------------------------------------------------------
             //---------------------------------------------------------------------------------------------------
             //Connection By Abigail Cabascango
@@ -41,7 +41,11 @@ public class DataBaseConnection {
             //connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/vinylstilos"
             //           + "?user=root&password=mypass");
             //---------------------------------------------------------------------------------------------------
-            
+             //Connection By KevinCaicedo
+           Class.forName("org.mariadb.jdbc.Driver");
+                connect = DriverManager.getConnection("jdbc:mariadb://localhost:3360/vinylstilos"
+                       + "?user=root&password=admin");
+                
             sqlStatement = connect.createStatement();
             System.out.println("conexion normal");
         } catch (Exception e) {

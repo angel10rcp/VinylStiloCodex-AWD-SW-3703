@@ -58,7 +58,7 @@
 					        <li><a class="menu" href="ourProducts.jsp">Inventario</a></li>
                                                 <li><a class="menu" href="pages/specificProductHTML.html">Producto</a></li>
 					        <li><a class="menu" href="SaleView">Venta</a></li>
-					        <li><a class="menu" href="#">Usuario</a></li>
+					        <li><a class="menu" href="register.html">Usuario</a></li>
 					   
 					      </ul>
 					    </div><!-- /navbar-collapse -->
