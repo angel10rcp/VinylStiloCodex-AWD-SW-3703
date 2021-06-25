@@ -18,16 +18,10 @@
     </head>
     <body>
         <h1>Search a Sale</h1>
-        <%
-            Sale sale = new Sale();
-            SaleClient saleClient = new SaleClient();
-            sale = saleClient.getSaleByIdUser(sale.getClass(), "027S");
-            //out.print(sale.toString());
-        %>
        <form action="ConsumeGetSale.jsp" method="POST">
             <div class="form-row align-items-center">
               <div class="col-sm-3 my-1">
-                <input type="text" class="form-control" name="idSale" id="inlineFormInputName" placeholder="Example: 027S">
+                <input type="text" class="form-control" name="idSale" id="idSale" placeholder="Example: 027S">
               </div>
               
               <div class="col-auto my-1">
