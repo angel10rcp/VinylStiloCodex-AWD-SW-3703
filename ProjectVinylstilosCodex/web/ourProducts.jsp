@@ -4,7 +4,11 @@
     Author     : codex
 --%>
 
+
+
 <%@page import="java.util.List"%>
+<%@page import="com.google.gson.JsonElement"%>
+<%@page import="com.google.gson.Gson"%>
 <%@page import="ec.edu.espe.vinylstilos.client.ProductRestClient"%>
 <%@page import="ec.edu.espe.vinylstilos.model.Product"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -43,13 +47,13 @@
                         jsonElement = gson.toJsonTree(products.get(i));
                         prod = gson.fromJson(jsonElement, Product.class); 
                     %>
-                    <td><div align="center"><%=prod.getId()%></div></td>
-                    <td><div align="center"><%=prod.getName()%></div></td>
-                    <td><div align="center"><%=prod.getDescription()%></div></td>
-                    <td><div align="center"><%=prod.getImage()%></div></td>
-                    <td><div align="center"><%=prod.getPrice()%></div></td>
-                    <td><div align="center"><%=prod.getAmong()%></div></td>
-                    <td><div align="center"><%=prod.getCategory()%></div></td>
+                    <td><div align="center"><%=prod.getIdProduct()%></div></td>
+                    <td><div align="center"><%=prod.getNameProduct()%></div></td>
+                    <td><div align="center"><%=prod.getDescriptionProduct()%></div></td>
+                    <td><div align="center"><%=prod.getImageProduct()%></div></td>
+                    <td><div align="center"><%=prod.getPriceProduct()%></div></td>
+                    <td><div align="center"><%=prod.getAmountProduct()%></div></td>
+                    <td><div align="center"><%=prod.getCategoryProduct()%></div></td>
                 </tr>
                 <% } %>
             </table>
