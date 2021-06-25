@@ -23,7 +23,7 @@
         
         <%
             ProductNameClient cli = new ProductNameClient();
-            ArrayList<Product> products = cli.getJson(ArrayList.class );
+            ArrayList<Product> products = cli.getData(ArrayList.class );
             
             Gson gson = new Gson();
             JsonElement jsonElement;
@@ -45,7 +45,8 @@
                 <tr>
                     <% 
                         jsonElement = gson.toJsonTree(products.get(i));
-                        prod = gson.fromJson(jsonElement, Product.class); 
+                        prod = gson.fromJson(jsonElement, Product.class);
+                        
                     %>
                     <td><div align="center"><%=prod.getIdProduct()%></div></td>
                     <td><div align="center"><%=prod.getNameProduct()%></div></td>

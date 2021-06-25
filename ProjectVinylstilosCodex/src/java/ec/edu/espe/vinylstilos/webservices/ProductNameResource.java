@@ -5,7 +5,7 @@
  */
 package ec.edu.espe.vinylstilos.webservices;
 
-import ec.edu.espe.vinylstilos.controller.ProductController2;
+import ec.edu.espe.vinylstilos.controller.ProductControllerName;
 import ec.edu.espe.vinylstilos.model.Product;
 import java.util.ArrayList;
 import javax.ws.rs.core.Context;
@@ -27,7 +27,7 @@ import javax.ws.rs.core.MediaType;
 @Path("productName")
 public class ProductNameResource {
 
-    private ProductController2 controller = new ProductController2();
+    private ProductControllerName controller = new ProductControllerName();
     
     @Context
     private UriInfo context;

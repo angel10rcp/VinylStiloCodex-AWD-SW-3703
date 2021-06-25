@@ -57,7 +57,7 @@
 					        <li><a class="menu active" href="#home" >Inicio</a></li>
 					        <li><a class="menu" href="ourProducts.jsp">Inventario</a></li>
                                                 <li><a class="menu" href="pages/specificProductHTML.html">Producto</a></li>
-					        <li><a class="menu" href="SaleView">Venta</a></li>
+					        <li><a class="menu" href="SaleView.jsp">Venta</a></li>
 					        <li><a class="menu" href="#">Usuario</a></li>
 					   
 					      </ul>

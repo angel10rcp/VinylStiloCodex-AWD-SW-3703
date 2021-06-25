@@ -18,22 +18,58 @@
     </head>
     <body>
         <h1>Search a Sale</h1>
-        <%
-            Sale sale = new Sale();
-            SaleClient saleClient = new SaleClient();
-            sale = saleClient.getSaleByIdUser(sale.getClass(), "027S");
-            //out.print(sale.toString());
-        %>
-       <form action="ConsumeGetSale.jsp" method="POST">
+        
+        <form action="SaleView.jsp" method="POST">
             <div class="form-row align-items-center">
               <div class="col-sm-3 my-1">
-                <input type="text" class="form-control" name="idSale" id="inlineFormInputName" placeholder="Example: 027S">
+                <input type="text" class="form-control" name="idSale" id="inlineFormInputName" placeholder="Example: 027S"/>
               </div>
               
               <div class="col-auto my-1">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </div>
-          </form>
+        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID VENTA</th>
+                                <th>ID USER</th>
+                                <th>TOTAL SALE</th>
+                                <th>DATE</th>                                  
+                            </tr>
+                        </thead>
+        
+        <%
+            Sale sale = new Sale();
+            SaleClient saleClient = new SaleClient();
+            if ((String) request.getParameter("idsale") != ""){
+                sale = saleClient.getSaleByIdUser(sale.getClass(), request.getParameter("idSale"));
+                
+            
+            
+        %>
+        
+        
+                        <tbody>
+                                                         
+                            <tr>
+                                <td><%=sale.getIdSale()%></td>
+                                <td><%=sale.getIdUser()%></td>
+                                <td><%=sale.getTotalSale()%></td>
+                                <td><%=sale.getDate()%></td>
+                                                                    
+                            </tr>
+                            
+                        </tbody>
+                    <% } %>
+                    </table>
+                </div>
+            </div>      
+        </div>
+       
     </body>
 </html>

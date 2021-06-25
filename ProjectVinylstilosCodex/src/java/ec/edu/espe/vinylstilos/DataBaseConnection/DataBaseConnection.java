@@ -12,7 +12,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author Angel Cardenas
+ * @author codex
  */
 public class DataBaseConnection {
     private Connection connect;
@@ -31,9 +31,9 @@ public class DataBaseConnection {
         try {           
             //---------------------------------------------------------------------------------------------------
             //Connection By Angel Cardenas
-           Class.forName("org.mariadb.jdbc.Driver");
-                connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
-                       + "?user=root&password=12345678");
+            Class.forName("org.mariadb.jdbc.Driver");
+            //     connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
+            //           + "?user=root&password=12345678");
             //---------------------------------------------------------------------------------------------------
             //---------------------------------------------------------------------------------------------------
             //Connection By Abigail Cabascango
@@ -41,7 +41,12 @@ public class DataBaseConnection {
             //connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/vinylstilos"
             //           + "?user=root&password=mypass");
             //---------------------------------------------------------------------------------------------------
-            
+            //---------------------------------------------------------------------------------------------------
+            //Connection By Pablo
+            //Class.forName("org.mariadb.jdbc.Driver");
+                 connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
+                       + "?user=root&password=1234");
+            //---------------------------------------------------------------------------------------------------
             sqlStatement = connect.createStatement();
             System.out.println("conexion normal");
         } catch (Exception e) {
