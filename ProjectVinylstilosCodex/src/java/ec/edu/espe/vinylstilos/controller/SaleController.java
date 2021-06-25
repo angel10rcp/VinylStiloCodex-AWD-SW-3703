@@ -22,6 +22,7 @@ import java.util.logging.Logger;
  */
 public class SaleController {
     
+    
     public SaleController() {
     
     }
@@ -36,16 +37,6 @@ public class SaleController {
         } catch (SQLException ex) {
             Logger.getLogger(DataBaseConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-    public Sale getSaleByIdSale(String idSale){
-        Sale wantedSale = new Sale();
-        List<Sale> saleList = readSales();
-        for (int i=0;i<saleList.size();i++) {
-            if(saleList.get(i).getIdSale().equals(idSale)){
-                wantedSale = saleList.get(i);
-            }
-        }
-        return wantedSale;
     }
     public void putSale(String idSale, Sale sale){
         Statement statement = null;
@@ -86,32 +77,31 @@ public class SaleController {
         
         return sale;
     }
-    public Sale getSaleByDate(String dateSale){
-        
+    
+    public Sale getSaleByIdSale(String idSale){
         Sale wantedSale = new Sale();
-        
-        List<Sale> saleList = this.readSales();
+        List<Sale> saleList = readSales();
         for (int i=0;i<saleList.size();i++) {
-            if(dateSale.equals(saleList.get(i).getDate())){
+            if(saleList.get(i).getIdSale().equals(idSale)){
                 wantedSale = saleList.get(i);
             }
         }
         return wantedSale;
     }
+    
     public List<Sale> readSales(){
         Statement statement = null;
         List<Sale> saleList = new ArrayList<>();
         
         DataBaseConnection connection = new DataBaseConnection();
         try{
-            
-            statement = connection.getSqlStatement();
-            
+            connection.connect();
+            statement = connection.getSqlStatement();           
             String sql = "SELECT * FROM sale";
             ResultSet res = statement.executeQuery(sql);
             
             while((res != null) && (res.next())){
-               saleList.add(new Sale( res.getString("idSale"), res.getString("idUser"),res.getFloat("totalScore"),res.getString("date")));
+               saleList.add(new Sale( res.getString("IDSALE"), res.getString("IDUSER"),res.getFloat("TOTALSALE"),res.getString("DATESALE")));
             }
             
         }catch(SQLException ex){

@@ -73,6 +73,11 @@ public class Sale {
         this.date = date;
     }
 
+    @Override
+    public String toString() {
+        return "Sale{" + "idSale=" + idSale + ", idUser=" + idUser + ", totalSale=" + totalSale + ", date=" + date + '}';
+    }
+    
     public Sale() {
     }
     
