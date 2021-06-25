@@ -19,7 +19,7 @@ import javax.ws.rs.client.WebTarget;
  *        client.close();
  * </pre>
  *
- * @author pabli
+ * @author codex
  */
 public class UserClient {
 
