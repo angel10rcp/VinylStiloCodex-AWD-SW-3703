@@ -6,10 +6,10 @@
 
 
 
-<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="ec.edu.espe.vinylstilos.client.ProductNameClient"%>
 <%@page import="com.google.gson.JsonElement"%>
 <%@page import="com.google.gson.Gson"%>
-<%@page import="ec.edu.espe.vinylstilos.client.ProductRestClient"%>
 <%@page import="ec.edu.espe.vinylstilos.model.Product"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -22,8 +22,8 @@
         <h1>Estos son nuestros productos:</h1>
         
         <%
-            ProductRestClient cli = new ProductRestClient();
-            List<Product> products = cli.getJson(List.class );
+            ProductNameClient cli = new ProductNameClient();
+            ArrayList<Product> products = cli.getJson(ArrayList.class );
             
             Gson gson = new Gson();
             JsonElement jsonElement;
@@ -38,7 +38,7 @@
                     <th width="91"> <div align="center">Description </div> </th>
                     <th width="91"> <div align="center">Image </div> </th>
                     <th width="100"> <div align="center">Price </div> </th>
-                    <th width="91"> <div align="center">Among </div> </th>
+                    <th width="91"> <div align="center">Amount </div> </th>
                     <th width="91"> <div align="center">Category</div> </th>
                 </tr>
                 <% for (int i=0; i<products.size(); i++){ %>

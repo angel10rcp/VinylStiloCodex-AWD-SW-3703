@@ -7,6 +7,7 @@ package ec.edu.espe.vinylstilos.webservices;
 
 import ec.edu.espe.vinylstilos.controller.ProductController2;
 import ec.edu.espe.vinylstilos.model.Product;
+import java.util.ArrayList;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
@@ -46,6 +47,13 @@ public class ProductNameResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Product getProductByName(@PathParam("name") String name ) {
         return controller.getDataByName(name);
+    }
+    
+    @GET
+    @Path("/data")
+    @Produces(MediaType.APPLICATION_JSON)
+    public ArrayList<Product> getData( ) {
+        return controller.getData();
     }
     
     @POST

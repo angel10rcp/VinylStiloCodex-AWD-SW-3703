@@ -8,6 +8,7 @@ package ec.edu.espe.vinylstilos.controller;
 import ec.edu.espe.vinylstilos.DataBaseConnection.DataBaseConnection;
 import ec.edu.espe.vinylstilos.model.Product;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,6 +16,7 @@ import java.sql.ResultSet;
  */
 public class ProductController2 {
     private Product product = new Product();
+    private ArrayList<Product> prods = new ArrayList<>();
     private DataBaseConnection db;
 
     public ProductController2() {
@@ -45,6 +47,32 @@ public class ProductController2 {
         
         db.disconnect();
         return product;
+    }
+    
+    public ArrayList<Product> getData(){
+        db.connect();
+        String sql = "select * from Product ;";
+        
+        try {
+            ResultSet rec = db.getSqlStatement().executeQuery(sql);
+            while(rec != null && rec.next() ){
+                Product prod = new Product(rec.getString("IDPRODUCT"),
+                rec.getString("NAMEPRODUCT"),
+                rec.getString("DESCRIPTIONPRODUCT"),
+                rec.getString("IMAGEPRODUCT"),
+                rec.getFloat("PRICE"),
+                rec.getInt("AMOUNTPRODUCT"),
+                rec.getString("CATEGORY"));
+                prods.add(prod);
+            }
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+            System.out.println("stack in the catchDel contro --> "+ e.toString());
+            e.printStackTrace();
+        }
+        
+        db.disconnect();
+        return prods;
     }
     
     public String postProduct(Product prod){
