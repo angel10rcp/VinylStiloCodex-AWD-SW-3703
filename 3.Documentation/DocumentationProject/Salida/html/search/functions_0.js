@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['close_152',['close',['../classec_1_1edu_1_1espe_1_1vinylstilos_1_1client_1_1_product_name_client.html#a50bac69b1dd8413e20f307475c21ea81',1,'ec.edu.espe.vinylstilos.client.ProductNameClient.close()'],['../classec_1_1edu_1_1espe_1_1vinylstilos_1_1client_1_1_product_rest_client.html#a5912eaff5ec128b25ffaa48266a56846',1,'ec.edu.espe.vinylstilos.client.ProductRestClient.close()'],['../classec_1_1edu_1_1espe_1_1vinylstilos_1_1client_1_1_sale_client.html#a00fa6d92cb14536310012e1afe123975',1,'ec.edu.espe.vinylstilos.client.SaleClient.close()'],['../classec_1_1edu_1_1espe_1_1vinylstilos_1_1client_1_1_user_client.html#aada9d358118d8db4086745453289f6e5',1,'ec.edu.espe.vinylstilos.client.UserClient.close()']]],
+  ['connect_153',['connect',['../classec_1_1edu_1_1espe_1_1vinylstilos_1_1_data_base_connection_1_1_data_base_connection.html#a45347e67e879b638ce04cafeb75af2ee',1,'ec::edu::espe::vinylstilos::DataBaseConnection::DataBaseConnection']]],
+  ['create_154',['create',['../classec_1_1edu_1_1espe_1_1vinylstilos_1_1client_1_1_user_client.html#a0607dc3936daee2f8dbb94e411a872ab',1,'ec.edu.espe.vinylstilos.client.UserClient.create()'],['../classec_1_1edu_1_1espe_1_1vinylstilos_1_1webservices_1_1_user_rest.html#a4a6805e3aa961f9b79ae2aaecae429f3',1,'ec.edu.espe.vinylstilos.webservices.UserRest.create()']]]
+];
