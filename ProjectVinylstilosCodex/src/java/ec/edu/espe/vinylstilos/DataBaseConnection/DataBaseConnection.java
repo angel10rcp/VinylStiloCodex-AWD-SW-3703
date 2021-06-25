@@ -31,15 +31,15 @@ public class DataBaseConnection {
         try {           
             //---------------------------------------------------------------------------------------------------
             //Connection By Angel Cardenas
-           Class.forName("org.mariadb.jdbc.Driver");
-                connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
-                       + "?user=root&password=12345678");
+          // Class.forName("org.mariadb.jdbc.Driver");
+            //    connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
+              //         + "?user=root&password=12345678");
             //---------------------------------------------------------------------------------------------------
             //---------------------------------------------------------------------------------------------------
             //Connection By Abigail Cabascango
-            //Class.forName("org.mariadb.jdbc.Driver");
-            //connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/vinylstilos"
-            //           + "?user=root&password=mypass");
+            Class.forName("org.mariadb.jdbc.Driver");
+            connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/vinylstilos"
+                       + "?user=root&password=mypass");
             //---------------------------------------------------------------------------------------------------
             
             sqlStatement = connect.createStatement();

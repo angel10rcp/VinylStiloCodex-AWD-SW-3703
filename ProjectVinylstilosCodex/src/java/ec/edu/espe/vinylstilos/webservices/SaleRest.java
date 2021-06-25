@@ -79,7 +79,6 @@ public class SaleRest {
     }
     @DELETE
     @Path("{deleteByIdSale}")
-    @Consumes(MediaType.APPLICATION_JSON)
     public void deleteByIdSale(@PathParam("deleteByIdSale") String idSale) {
         SaleController removeSale = new SaleController();
         removeSale.deleteSale(idSale);
