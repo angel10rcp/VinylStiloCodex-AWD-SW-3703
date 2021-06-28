@@ -58,11 +58,7 @@
 					        <li><a class="menu" href="ourProducts.jsp">Inventario</a></li>
                                                 <li><a class="menu" href="pages/specificProductHTML.html">Producto</a></li>
 					        <li><a class="menu" href="SaleView.jsp">Venta</a></li>
-<<<<<<< HEAD:ProjectVinylstilosCodex/web/index.jsp
-					        <li><a class="menu" href="#">Usuario</a></li>
-=======
 					        <li><a class="menu" href="register.html">Usuario</a></li>
->>>>>>> c2072fce8a72cb22d0515864de13ba05e7dd63c8:6.Code/ProjectVinylstilosCodex/build/web/index.jsp
 					   
 					      </ul>
 					    </div><!-- /navbar-collapse -->
