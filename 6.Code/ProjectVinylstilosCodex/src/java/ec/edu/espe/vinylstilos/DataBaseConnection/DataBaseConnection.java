@@ -31,37 +31,33 @@ public class DataBaseConnection {
         try {           
             //---------------------------------------------------------------------------------------------------
             //Connection By Angel Cardenas
-<<<<<<< HEAD:ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/DataBaseConnection/DataBaseConnection.java
-            Class.forName("org.mariadb.jdbc.Driver");
+            //Class.forName("org.mariadb.jdbc.Driver");
             //     connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
             //           + "?user=root&password=12345678");
-=======
-           Class.forName("org.mariadb.jdbc.Driver");
-                connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
-                      + "?user=root&password=12345678");
->>>>>>> c2072fce8a72cb22d0515864de13ba05e7dd63c8:6.Code/ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/DataBaseConnection/DataBaseConnection.java
+
+          // Class.forName("org.mariadb.jdbc.Driver");
+            //    connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
+             //         + "?user=root&password=12345678");
             //---------------------------------------------------------------------------------------------------
             //---------------------------------------------------------------------------------------------------
             //Connection By Abigail Cabascango
-            //Class.forName("org.mariadb.jdbc.Driver");
-            //connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/vinylstilos"
-            //           + "?user=root&password=mypass");
+            Class.forName("org.mariadb.jdbc.Driver");
+            connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/vinylstilos"
+                       + "?user=root&password=mypass");
             //---------------------------------------------------------------------------------------------------
-<<<<<<< HEAD:ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/DataBaseConnection/DataBaseConnection.java
             //---------------------------------------------------------------------------------------------------
             //Connection By Pablo
             //Class.forName("org.mariadb.jdbc.Driver");
-                 connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
-                       + "?user=root&password=1234");
+             //    connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
+            //           + "?user=root&password=1234");
             //---------------------------------------------------------------------------------------------------
-=======
+
              //Connection By KevinCaicedo
            //Class.forName("org.mariadb.jdbc.Driver");
             //    connect = DriverManager.getConnection("jdbc:mariadb://localhost:3360/vinylstilos"
             //           + "?user=root&password=admin");
                 
->>>>>>> c2072fce8a72cb22d0515864de13ba05e7dd63c8:6.Code/ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/DataBaseConnection/DataBaseConnection.java
-            sqlStatement = connect.createStatement();
+          sqlStatement = connect.createStatement();
             System.out.println("conexion normal");
         } catch (Exception e) {
             System.out.println("e.getMessage()");
