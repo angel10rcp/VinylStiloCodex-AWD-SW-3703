@@ -3,15 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Lenovo/Desktop/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/controller/ProductControllerName.java</file>
-            <file>file:/C:/Users/Lenovo/Desktop/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/web/ConsumeGetSale.jsp</file>
-            <file>file:/C:/Users/Lenovo/Desktop/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/web/ourProducts.jsp</file>
-            <file>file:/C:/Users/Lenovo/Desktop/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/web/register.jsp</file>
-            <file>file:/C:/Users/Lenovo/Desktop/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/web/index.jsp</file>
-            <file>file:/C:/Users/Lenovo/Desktop/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/web/SaleView.jsp</file>
-            <file>file:/C:/Users/Lenovo/Desktop/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/web/js/validateIdSale.js</file>
-            <file>file:/C:/Users/Lenovo/Desktop/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/web/expand.gif</file>
-            <file>file:/C:/Users/Lenovo/Desktop/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/DataBaseConnection/DataBaseConnection.java</file>
+            <file>file:/C:/Users/Kevin%20Caicedo/Documents/5to%20semestre/Web%20Avanzado/Proyecto%20Repositorio%20Grupo%203/VinylStiloCodex-AWD-SW-3703/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/DataBaseConnection/DataBaseConnection.java</file>
+            <file>file:/C:/Users/Kevin%20Caicedo/Documents/5to%20semestre/Web%20Avanzado/Proyecto%20Repositorio%20Grupo%203/VinylStiloCodex-AWD-SW-3703/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/webservices/ProductNameResource.java</file>
+            <file>file:/C:/Users/Kevin%20Caicedo/Documents/5to%20semestre/Web%20Avanzado/Proyecto%20Repositorio%20Grupo%203/VinylStiloCodex-AWD-SW-3703/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/web/ourProducts.jsp</file>
+            <file>file:/C:/Users/Kevin%20Caicedo/Documents/5to%20semestre/Web%20Avanzado/Proyecto%20Repositorio%20Grupo%203/VinylStiloCodex-AWD-SW-3703/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/web/pages/specificProduct.jsp</file>
+            <file>file:/C:/Users/Kevin%20Caicedo/Documents/5to%20semestre/Web%20Avanzado/Proyecto%20Repositorio%20Grupo%203/VinylStiloCodex-AWD-SW-3703/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/client/ProductNameClient.java</file>
+            <file>file:/C:/Users/Kevin%20Caicedo/Documents/5to%20semestre/Web%20Avanzado/Proyecto%20Repositorio%20Grupo%203/VinylStiloCodex-AWD-SW-3703/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/DataBaseConnection/Config.java</file>
+            <file>file:/C:/Users/Kevin%20Caicedo/Documents/5to%20semestre/Web%20Avanzado/Proyecto%20Repositorio%20Grupo%203/VinylStiloCodex-AWD-SW-3703/VinylStiloCodex-AWD-SW-3703/6.Code/ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/controller/ProductControllerName.java</file>
         </group>
     </open-files>
 </project-private>
