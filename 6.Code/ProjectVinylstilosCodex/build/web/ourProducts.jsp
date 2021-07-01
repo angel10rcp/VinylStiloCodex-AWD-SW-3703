@@ -17,54 +17,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>List Products</title>
     </head>
     <body>
         <h1>These are our products</h1>
-
+        
         <%
-            ProductRest productRest = new ProductRest();
-            List<Product> products = productRest.getJson();
-            Product product = new Product();
-
+           ProductRest productRest = new ProductRest();
+           List<Product> products = productRest.getJson();
+           Product product = new Product();
+           
         %>
-
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <table class="table">
-                        <tr>
-                            <th width="91"> <div align="center"> ID </div> </th>
-                            <th width="98"> <div align="center">Name </div> </th>
-                            <th width="91"> <div align="center">Description </div> </th>
-                            <th width="91"> <div align="center">Image </div> </th>
-                            <th width="100"> <div align="center">Price </div> </th>
-                            <th width="91"> <div align="center">Amount </div> </th>
-                            <th width="91"> <div align="center">Category</div> </th>
-                        </tr>
-                        <% for (int i = 0; i < products.size(); i++) { %>
-                        <tr>
-                            <%
-                                product = products.get(i);
-                            %>
-                            <td><div align="center"><%=product.getIdProduct()%></div></td>
-                            <td><div align="center"><%=product.getNameProduct()%></div></td>
-                            <td><div align="center"><%=product.getDescriptionProduct()%></div></td>
-                            <td><div align="center"><%=product.getImageProduct()%></div></td>
-                            <td><div align="center"><%=product.getPriceProduct()%></div></td>
-                            <td><div align="center"><%=product.getAmountProduct()%></div></td>
-                            <td><div align="center"><%=product.getCategoryProduct()%></div></td>
-                        </tr>
-                        <% }%>
-                    </table>
-                </div>
-            </div>      
-        </div>
-
-
-
+        
+        <table width="600" borde="1">
+                <tr>
+                    <th width="91"> <div align="center"> ID </div> </th>
+                    <th width="98"> <div align="center">Name </div> </th>
+                    <th width="91"> <div align="center">Description </div> </th>
+                    <th width="91"> <div align="center">Image </div> </th>
+                    <th width="100"> <div align="center">Price </div> </th>
+                    <th width="91"> <div align="center">Amount </div> </th>
+                    <th width="91"> <div align="center">Category</div> </th>
+                </tr>
+                <% for (int i=0; i<products.size(); i++){ %>
+                <tr>
+                    <% 
+                        product = products.get(i); 
+                    %>
+                    <td><div align="center"><%=product.getIdProduct()%></div></td>
+                    <td><div align="center"><%=product.getNameProduct()%></div></td>
+                    <td><div align="center"><%=product.getDescriptionProduct()%></div></td>
+                    <td><div align="center"><%=product.getImageProduct()%></div></td>
+                    <td><div align="center"><%=product.getPriceProduct()%></div></td>
+                    <td><div align="center"><%=product.getAmountProduct()%></div></td>
+                    <td><div align="center"><%=product.getCategoryProduct()%></div></td>
+                </tr>
+                <% } %>
+            </table>
+        
+        
+        
     </body>
 </html>

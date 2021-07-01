@@ -12,13 +12,23 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>research for product</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>La informacion:</h1>
         
         <%
             ProductNameClient cli = new ProductNameClient();
+<<<<<<< HEAD:ProjectVinylstilosCodex/web/ourProducts.jsp
+            ArrayList<Product> products = cli.getData(ArrayList.class );
+            
+            Gson gson = new Gson();
+            JsonElement jsonElement;
+            Product prod;
+=======
             Product prod = cli.getProductByName(Product.class, request.getParameter("name") );
+>>>>>>> c2072fce8a72cb22d0515864de13ba05e7dd63c8:6.Code/ProjectVinylstilosCodex/web/pages/specificProduct.jsp
             
         %>
         
@@ -34,6 +44,14 @@
                 </tr>
                 <% if (prod != null){ %>
                 <tr>
+<<<<<<< HEAD:ProjectVinylstilosCodex/web/ourProducts.jsp
+                    <% 
+                        jsonElement = gson.toJsonTree(products.get(i));
+                        prod = gson.fromJson(jsonElement, Product.class);
+                        
+                    %>
+=======
+>>>>>>> c2072fce8a72cb22d0515864de13ba05e7dd63c8:6.Code/ProjectVinylstilosCodex/web/pages/specificProduct.jsp
                     <td><div align="center"><%=prod.getIdProduct()%></div></td>
                     <td><div align="center"><%=prod.getNameProduct()%></div></td>
                     <td><div align="center"><%=prod.getDescriptionProduct()%></div></td>
