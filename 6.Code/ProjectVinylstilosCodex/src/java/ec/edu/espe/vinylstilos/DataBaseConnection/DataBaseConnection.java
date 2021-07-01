@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,8 +19,7 @@ import java.sql.Statement;
 public class DataBaseConnection {
     private Connection connect;
     private Statement sqlStatement;
-    
-      public  DataBaseConnection() {
+    public  DataBaseConnection(){
         connect = null;
         sqlStatement = null;
     }
@@ -27,47 +28,24 @@ public class DataBaseConnection {
         return sqlStatement;
     }
         
-      public void connect() {
-        try {           
-            //---------------------------------------------------------------------------------------------------
-            //Connection By Angel Cardenas
-<<<<<<< HEAD:ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/DataBaseConnection/DataBaseConnection.java
+      public void connect() {         
+           String path = "C:\\Users\\Kevin Caicedo\\Documents\\5to semestre\\Web Avanzado\\Proyecto Repositorio Grupo 3\\config.json";
+             try {
             Class.forName("org.mariadb.jdbc.Driver");
-            //     connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
-            //           + "?user=root&password=12345678");
-=======
-           Class.forName("org.mariadb.jdbc.Driver");
-                connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
-                      + "?user=root&password=12345678");
->>>>>>> c2072fce8a72cb22d0515864de13ba05e7dd63c8:6.Code/ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/DataBaseConnection/DataBaseConnection.java
-            //---------------------------------------------------------------------------------------------------
-            //---------------------------------------------------------------------------------------------------
-            //Connection By Abigail Cabascango
-            //Class.forName("org.mariadb.jdbc.Driver");
-            //connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/vinylstilos"
-            //           + "?user=root&password=mypass");
-            //---------------------------------------------------------------------------------------------------
-<<<<<<< HEAD:ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/DataBaseConnection/DataBaseConnection.java
-            //---------------------------------------------------------------------------------------------------
-            //Connection By Pablo
-            //Class.forName("org.mariadb.jdbc.Driver");
-                 connect = DriverManager.getConnection("jdbc:mariadb://localhost:3307/vinylstilos"
-                       + "?user=root&password=1234");
-            //---------------------------------------------------------------------------------------------------
-=======
-             //Connection By KevinCaicedo
-           //Class.forName("org.mariadb.jdbc.Driver");
-            //    connect = DriverManager.getConnection("jdbc:mariadb://localhost:3360/vinylstilos"
-            //           + "?user=root&password=admin");
-                
->>>>>>> c2072fce8a72cb22d0515864de13ba05e7dd63c8:6.Code/ProjectVinylstilosCodex/src/java/ec/edu/espe/vinylstilos/DataBaseConnection/DataBaseConnection.java
-            sqlStatement = connect.createStatement();
+            connect = DriverManager.getConnection("jdbc:mariadb://" + Config.readConfig(path, "HOST") + ":" 
+                    + Config.readConfig(path, "PORT") + "/" 
+                    + Config.readConfig(path, "NAME")
+                    + "?user=" + Config.readConfig(path, "USER")
+                    + "&password=" + Config.readConfig(path, "PASSWORD"));
+             sqlStatement = connect.createStatement();
             System.out.println("conexion normal");
-        } catch (Exception e) {
-            System.out.println("e.getMessage()");
-            System.out.println("stack in the catch --> " + e.toString());
-            e.printStackTrace();
-        }
+             } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(DataBaseConnection.class.getName()).log(Level.SEVERE, null, ex);
+             }
+        
+          
+                
+         
     }
     public void disconnect() {
         try {

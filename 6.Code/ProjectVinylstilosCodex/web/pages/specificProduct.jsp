@@ -4,6 +4,9 @@
     Author     : codex
 --%>
 
+<%@page import="com.google.gson.JsonElement"%>
+<%@page import="com.google.gson.Gson"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="ec.edu.espe.vinylstilos.model.Product"%>
 <%@page import="ec.edu.espe.vinylstilos.client.ProductNameClient"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -20,15 +23,10 @@
         
         <%
             ProductNameClient cli = new ProductNameClient();
-<<<<<<< HEAD:ProjectVinylstilosCodex/web/ourProducts.jsp
-            ArrayList<Product> products = cli.getData(ArrayList.class );
+
+        
             
-            Gson gson = new Gson();
-            JsonElement jsonElement;
-            Product prod;
-=======
-            Product prod = cli.getProductByName(Product.class, request.getParameter("name") );
->>>>>>> c2072fce8a72cb22d0515864de13ba05e7dd63c8:6.Code/ProjectVinylstilosCodex/web/pages/specificProduct.jsp
+            Product prod =(Product)cli.getProductByName(Product.class, request.getParameter("name"));
             
         %>
         
@@ -44,14 +42,12 @@
                 </tr>
                 <% if (prod != null){ %>
                 <tr>
-<<<<<<< HEAD:ProjectVinylstilosCodex/web/ourProducts.jsp
                     <% 
-                        jsonElement = gson.toJsonTree(products.get(i));
-                        prod = gson.fromJson(jsonElement, Product.class);
+                        
+                        
+                      
                         
                     %>
-=======
->>>>>>> c2072fce8a72cb22d0515864de13ba05e7dd63c8:6.Code/ProjectVinylstilosCodex/web/pages/specificProduct.jsp
                     <td><div align="center"><%=prod.getIdProduct()%></div></td>
                     <td><div align="center"><%=prod.getNameProduct()%></div></td>
                     <td><div align="center"><%=prod.getDescriptionProduct()%></div></td>

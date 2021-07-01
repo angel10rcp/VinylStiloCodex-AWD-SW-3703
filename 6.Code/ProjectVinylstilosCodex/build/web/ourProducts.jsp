@@ -18,9 +18,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<<<<<<< HEAD
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <title>List Products</title>
+=======
+        <title>List Products</title>
+        <link rel="stylesheet" href="style.css">
+>>>>>>> 148ef730ae70777fe4a06485d765d31d1a9c996e
     </head>
     <body>
         <h1>These are our products</h1>
